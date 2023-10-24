@@ -1,0 +1,185 @@
+* {
+    font-family: "brushberry-sans-one", sans-serif;
+    margin: 0%;
+}
+
+#section-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+    color: #333333;
+    font-size: 50px;
+    animation-name:introAnimate;
+    animation-delay: 1s;
+    animation-direction: alternate-reverse;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#pain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-size: 100px;
+    animation-name: enlargeAndShake;
+    animation-delay: 1.5s;
+    animation-direction: normal;
+    animation-duration:3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#section-2, #tell, #section-2-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    background-color: #60A699;
+    color: #333333;
+    font-size: 50px;
+}
+
+#tell {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    font-size: 100px;
+    font-family: "brushberry-script", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #D94B18;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(5),
+        cursor .4s step-end infinite alternate;
+    animation-delay: .5s;
+    animation-direction: normal;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+#section-2-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 55vh;
+    font-size: 50px;
+}
+
+#section-3 {
+    text-align: start;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 50px;
+}
+
+#tall {
+    width: 100px;
+    height: 100px;
+    animation-name: stretchAnimation;
+    animation-delay: 2s;
+    animation-direction: normal;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    color: white;
+}
+
+#section-3, #section-3-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 50vh;
+        background-color: #F28729;
+        color: #333333;
+        font-size: 50px;
+
+    }
+
+.link {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #F2D230;
+}
+
+.link:hover {
+    color: white;
+}
+
+
+@keyframes introAnimate {
+    from {
+        background-color: #F2D230;
+    }
+    to {
+        background-color: #D94B18;
+    }
+}
+
+@keyframes enlargeAndShake {
+    0% {
+        transform: scale(2);
+    }
+    25% {
+        transform: scale(1.5);
+    }
+    50% {
+        transform: scale(1.1);
+        animation-timing-function: ease-out;
+    }
+    75% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(2);
+    }
+}
+
+@keyframes cursor {
+    50% { border-color: transparent}
+}
+
+@keyframes typing {
+    from {width: 0}
+}
+
+@keyframes stretchAnimation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(4);
+    }
+}
